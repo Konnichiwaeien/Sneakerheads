@@ -1,0 +1,161 @@
+$bg-logo:#9B9B9B;
+
+
+
+.main-header {
+  padding: 50px 60px 10px 60px;
+}
+
+.main-header__container {
+  @include flex-def();
+}
+
+.main-header__info {
+  @include flex-def();
+}
+
+.main-header__logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 16px;
+
+  &:hover,
+  &:focus {
+    & ~ .main-header__info-content .main-header__title {
+      color: $text-clr-hvr;
+    }
+
+    .main-header__logo-icon {
+      transform: rotate(-10deg);
+
+      circle {
+        fill: $bg-logo;
+      }
+    }
+  }
+
+  &:active {
+    & ~ .main-header__info-content .main-header__title {
+      color: darken($text-clr-hvr, 10%);
+    }
+  }
+
+  &--highlighted {
+    .main-header__logo-icon {
+      transform: rotate(-10deg);
+
+      circle {
+        fill: $bg-logo;
+      }
+    }
+  }
+}
+
+.main-header__logo-icon {
+  width: 100px;
+  height: 100px;
+  @include trans(transform);
+
+  circle {
+    @include trans(fill);
+  }
+}
+
+.main-header__info-content {
+  padding-top: 15px;
+}
+
+.main-header__title {
+  @include font(20px, 24px, 700);
+  text-transform: uppercase;
+  transition: $tns-text;
+
+  &:hover,
+  &:focus {
+    color: $text-clr-hvr;
+  }
+
+  &:active {
+    color: darken($text-clr-hvr, 10%);
+  }
+}
+
+.main-header__text {
+  color: #9D9D9D;
+  @include font($fs, $lh);
+}
+
+.main-header__user {
+  padding-top: 25px;
+}
+
+.main-header__user-list {
+  display: flex;
+}
+
+.main-header__user-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-header__user-btn {
+  &:hover,
+  &:focus {
+    .main-header__user-text {
+      color: $text-clr-hvr;
+    }
+
+    .main-header__icon,
+    .main-header__icon path {
+      stroke: $bg-hvr-clr-svg;
+    }
+  }
+
+  &:active {
+    .main-header__user-text {
+      color: darken($text-clr-hvr, 10%);
+    }
+
+    .main-header__icon,
+    .main-header__icon path {
+      stroke: darken($bg-hvr-clr-svg, 10%);;
+    }
+  }
+}
+
+.main-header__user-text {
+  margin-left: 10px;
+  vertical-align: top;
+  color: #5C5C5C;
+  @include font(14px, 17px, 600);
+  @include trans(color);
+}
+
+.main-header__icon {
+  @include trans(stroke);
+
+  path {
+    @include trans(stroke);
+  }
+
+  &--cart {
+    width: 18px;
+    height: 17px;
+  }
+
+  &--heart {
+    width: 21px;
+    height: 19px;
+    stroke: $bg-clr-svg-base;
+  }
+
+  &--user {
+    width: 20px;
+    height: 20px;
+    stroke: $bg-clr-svg-base;
+    stroke-width: 2px;
+  }
+}

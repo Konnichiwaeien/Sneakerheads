@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+body {
+  min-width: 320px;
+  color: $text-clr-base;
+  background: $bg-clr-base;
+  @include font($fs-base, $lh-base, $fw, $ff);
+}
+
+
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+sup,
+sub {
+  position: relative;
+  vertical-align: baseline;
+  @include font(50%, 0);
+}
+
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

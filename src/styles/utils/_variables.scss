@@ -1,0 +1,51 @@
+$black: #000000;
+$white: #ffffff;
+$blue: #E7F6FF;
+$blue-gray: #AFB0CC;
+$gray: #C4C4C4;;
+$gray-dark: #9B9B9B;
+$light-gray: #F4F4F4;
+$silver: #BDBDBD;
+
+
+
+$text-clr: $white;
+$text-clr-hvr: $blue-gray;
+$text-clr-base: $black;
+$text-clr-add: $gray-dark;
+
+
+
+$bg-clr: $white;
+$bg-clr-base: $blue;
+
+$bg-clr-svg: $gray;
+$bg-clr-svg-base: $gray-dark;
+$bg-hvr-clr-svg: $blue-gray;
+
+$brdr-clr: $light-gray;
+
+
+
+$fs: 14px;
+$fs-base: 20px;
+
+$lh: 17px;
+$lh-base: 27px;
+
+$fw: 400;
+
+$ff: 'Inter', sans-serif;
+
+
+$tns-time: 0.2s;
+$tns-type: linear;
+
+$tns: all $tns-time $tns-type;
+
+$tns-text: color $tns-time linear;
+$tns-bg: background $tns-time linear;
+$tns-bg-svg: fill $tns-time linear;
+$tns-stroke-svg: fill $tns-time linear;
+$tns-plc: opacity $tns-time linear;
+$tns-brd: border-color $tns-time linear;

@@ -1,0 +1,43 @@
+$font-props: 'font-size', 'line-height', 'font-weight', 'font-family';
+
+
+
+@mixin font ($args...) {
+  @for $i from 0 to length($args) {
+    #{nth($font-props, $i + 1)}: nth($args, $i + 1);
+  }
+}
+
+@mixin pseudo ($content: '', $position: absolute, $display: block) {
+  content: $content;
+  position: $position;
+  display: $display;
+}
+
+@mixin align ($direction, $top: 50%, $left: 50%, $translateX: -50%, $translateY: -50%) {
+  @if $direction == 'horizont' {
+    left: $left;
+    transform: translateX($translateX);
+  }
+
+  @if $direction == 'vertical' {
+    top: $top;
+    transform: translateY($translateY);
+  }
+
+  @if $direction == 'all' {
+    top: $top;
+    left: $left;
+    transform: translate($translateX, $translateY);
+  }
+}
+
+@mixin trans ($prop: all, $time: $tns-time, $type: $tns-type) {
+  transition: $prop $time $type;
+}
+
+@mixin flex-def ($jcnt: space-between, $alitms: center) {
+  display: flex;
+  justify-content: $jcnt;
+  align-items: $alitms;
+}
